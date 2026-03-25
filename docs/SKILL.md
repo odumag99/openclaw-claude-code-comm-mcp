@@ -1,6 +1,6 @@
 ---
 name: claude-code-comm
-description: "OpenClaw ↔ Claude Code 실시간 양방향 통신 브릿지. Use when: (1) Claude Code와 실시간으로 소통하며 복잡한 작업을 진행할 때, (2) Claude Code의 permission request를 직접 제어할 때, (3) [Claude Code 보고] 또는 [Claude Code 승인 요청] system event를 받았을 때. NOT for: 단순 단발 작업 → claude-code-session 사용. NOT for: openclaw-bridge Channel이 실행 중이지 않을 때 → claude-code-session fallback 사용."
+description: "OpenClaw ↔ Claude Code 실시간 양방향 통신 브릿지. Use when: (1) Claude Code와 양방향 소통이 필요한 작업을 진행하고자 하거나 진행 중일 때, (2) Claude Code의 permission request를 직접 제어할 때, (3) [Claude Code 보고] 또는 [Claude Code 승인 요청] system event를 받았을 때. NOT for: 단순 단발 작업으로 결과만 받으면 될 때 → claude-code-session 사용."
 metadata:
   {
     "openclaw": {
@@ -25,11 +25,11 @@ OpenClaw(나)가 Claude Code(코딩 에이전트)를 supervisor로서 관리하�
 | **적합한 작업** | 복잡한 협업 작업 | 명확한 단발 작업 |
 | **Channel 필요** | ✅ (tmux + openclaw-bridge) | ❌ |
 
-→ **단순 단발 작업이거나 Channel이 없으면 `claude-code-session` 사용**
+→ **단순 단발 작업으로 결과만 받으면 될 때는 `claude-code-session` 사용**
 
 ## 언제 사용하나
 
-- 재민 님이 복잡한 코딩 작업을 요청했고, 중간 개입/승인이 필요할 때
+- 재민 님이 양방향 소통이 필요한 코딩 작업을 요청했거나, 진행 중일 때
 - `[Claude Code 보고]` system event를 받았을 때
 - `[Claude Code 승인 요청]` system event를 받았을 때
 

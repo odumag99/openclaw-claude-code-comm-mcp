@@ -1,0 +1,16 @@
+{
+  "name": "openclaw-claude-code-comm-mcp",
+  "version": "0.1.0",
+  "description": "MCP Channel Server bridging Claude Code and OpenClaw",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.0.0",
+    "zod": "^3.0.0"
+  }
+}
